@@ -17,6 +17,8 @@ import HomeBillboard, {
   GetHomeBillboardResponse,
 } from '../components/homeBillboard';
 
+import ContactForm from '../components/contactForm'; 
+
 export async function getStaticProps() {
   const headerData = await getHeaderData();
   const headerMenuData = await getHeaderMenuData();
@@ -56,6 +58,7 @@ export default function Home({ headerData, headerMenuData, footerData, socialDat
         <HomeBillboard 
           hbdata={homeBillboardData?.pageBy?.homepageSettings} 
         />
+        <ContactForm />
       </main>
       <Footer 
         fdata={footerData?.footerSettings?.themeFooterSettings} 
