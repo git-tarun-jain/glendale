@@ -64,7 +64,7 @@ export default function homeBillboard({ hbdata }: HomeBillboardProps) {
     {bsImage &&
     <div className="billboard header_gap">
       <div className="item">
-          <Image src={bsImage?.node?.sourceUrl} alt={bsImage?.node?.altText} fill />
+          <Image src={bsImage?.node?.sourceUrl} alt={bsImage?.node?.altText} fill loading='eager' />
       </div>
     </div>
     }
