@@ -13,7 +13,7 @@ export default function ContactFormWithFile() {
     const formData = new FormData(form);
 const CF7_URL = process.env.NEXT_PUBLIC_WORDPRESS_URL ?? '';
     try {
-      const res = await fetch(CF7_URL + 'wp-json/contact-form-7/v1/contact-forms/1553/feedback', {
+      const res = await fetch(`${CF7_URL}wp-json/contact-form-7/v1/contact-forms/1553/feedback`, {
         method: 'POST',
         body: formData,
       });
