@@ -4,6 +4,10 @@ import Link from 'next/link';
 
 const API_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL ?? '';
 
+if (!API_URL) {
+  throw new Error('Environment variable NEXT_PUBLIC_WORDPRESS_API_URL is not set');
+}
+
 interface HeaderButton {
   title: string;
   url: string;
